@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efi Arvaniti | Computer Engineer & Educator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1d1d1f;
+            --accent-color: #0071e3;
+            --secondary-text: #86868b;
+            --card-bg: #f5f5f7;
+            --border-color: #d2d2d7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.47059;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+        }
+
+        header {
+            padding: 120px 20px 60px;
+            max-width: 980px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 22px;
+        }
+
+        h1 {
+            font-size: 56px;
+            line-height: 1.07143;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            line-height: 1.16667;
+            font-weight: 400;
+            letter-spacing: .009em;
+            color: var(--secondary-text);
+            margin-bottom: 24px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h2 {
+            font-size: 40px;
+            line-height: 1.1;
+            font-weight: 600;
+            letter-spacing: 0em;
+            margin-bottom: 40px;
+        }
+
+        .about-text {
+            font-size: 21px;
+            line-height: 1.38105;
+            font-weight: 400;
+            letter-spacing: .011em;
+            color: var(--text-color);
+            max-width: 80%;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .experience-item {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 18px;
+            transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+        }
+
+        .experience-item:hover {
+            transform: scale(1.02);
+        }
+
+        .role {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .company {
+            font-size: 19px;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+        }
+
+        .date {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--secondary-text);
+            margin-bottom: 16px;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-tag {
+            background: rgba(0,0,0,0.05);
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        footer {
+            padding: 80px 22px;
+            background: #f5f5f7;
+            text-align: center;
+            color: var(--secondary-text);
+            font-size: 12px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 17px;
+            border-bottom: 1px solid transparent;
+        }
+
+        .social-links a:hover {
+            border-bottom-color: var(--accent-color);
+        }
+
+        @media (max-width: 734px) {
+            h1 { font-size: 40px; }
+            h2 { font-size: 32px; }
+            .experience-grid { grid-template-columns: 1fr; }
+            .about-text { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Efi Arvaniti</h1>
+        <p class="subtitle">Computer Engineer & Educator based in Seattle.</p>
+        <div class="social-links">
+            <a href="https://gr.linkedin.com/in/efi-arvaniti-47a71343" target="_blank">LinkedIn</a>
+            <a href="mailto:earvaniti@example.com">Contact</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About</h2>
+            <p class="about-text">
+                I am a passionate Computer Engineer and Educator with a background in Electronic and Computer Engineering from the Technical University of Crete. Recently moved to Seattle, I bring a unique blend of technical expertise in Data Analysis and Machine Learning, combined with a strong foundation in education.
+            </p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            
+            <div class="experience-item">
+                <div class="role">Behavioral Data Analyst</div>
+                <div class="company">Behavioral Signals</div>
+                <div class="date">Previously: Junior Machine Learning Engineer</div>
+                <p>Focused on processing and analyzing complex datasets to extract meaningful behavioral insights using advanced ML techniques.</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="role">Computer Engineering & Education</div>
+                <div class="company">Technical University of Crete (ECE)</div>
+                <p>Graduate of Electronic and Computer Engineering. Trilingual professional (Greek, German, English) with a focus on merging technology with pedagogical excellence.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">Data Analysis</div>
+                <div class="skill-tag">Machine Learning</div>
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">Pedagogy</div>
+                <div class="skill-tag">Computer Engineering</div>
+                <div class="skill-tag">Trilingual (GR/DE/EN)</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="experience-grid">
+                <div class="experience-item">
+                    <div class="role">Project Title</div>
+                    <div class="company">Engineering / Research</div>
+                    <p>A brief description of the technical challenges, the stack used, and the impact of the project. (Content to be updated).</p>
+                </div>
+                <div class="experience-item">
+                    <div class="role">Educational Initiative</div>
+                    <div class="company">Pedagogy / Tech</div>
+                    <p>Details about curriculum design, teaching methods, or technical education projects. (Content to be updated).</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Efi Arvaniti | arvaniti.gr</p>
+    </footer>
+
+</body>
+</html>

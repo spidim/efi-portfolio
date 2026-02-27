@@ -6,7 +6,6 @@
     <title>Efi Arvaniti | Computer Engineer & Educator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #ffffff;
@@ -15,6 +14,7 @@
             --secondary-text: #86868b;
             --card-bg: #f5f5f7;
             --border-color: #d2d2d7;
+            --nav-bg: rgba(255, 255, 255, 0.8);
         }
 
         * {
@@ -24,6 +24,10 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
             background-color: var(--bg-color);
@@ -31,6 +35,41 @@
             line-height: 1.47059;
             font-weight: 400;
             letter-spacing: -0.022em;
+        }
+
+        /* Nav Bar */
+        nav.main-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 44px;
+            background: var(--nav-bg);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav.main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav.main-nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 12px;
+            font-weight: 400;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        nav.main-nav a:hover {
+            opacity: 1;
+            color: var(--accent-color);
         }
 
         header {
@@ -65,6 +104,11 @@
 
         section {
             padding: 80px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
         }
 
         h2 {
@@ -165,46 +209,82 @@
             h2 { font-size: 32px; }
             .experience-grid { grid-template-columns: 1fr; }
             .about-text { max-width: 100%; }
+            nav.main-nav ul { gap: 15px; }
+            nav.main-nav a { font-size: 10px; }
         }
     </style>
 </head>
 <body>
 
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <header>
         <h1>Efi Arvaniti</h1>
-        <p class="subtitle">Computer Engineer & Educator based in Seattle.</p>
-        <div class="social-links">
-            <a href="https://gr.linkedin.com/in/efi-arvaniti-47a71343" target="_blank">LinkedIn</a>
-            <a href="mailto:earvaniti@example.com">Contact</a>
-        </div>
+        <p class="subtitle">Computer Engineer & Educator</p>
     </header>
 
     <div class="container">
         <section id="about">
             <h2>About</h2>
             <p class="about-text">
-                I am a passionate Computer Engineer and Educator with a background in Electronic and Computer Engineering from the Technical University of Crete. Recently moved to Seattle, I bring a unique blend of technical expertise in Data Analysis and Machine Learning, combined with a strong foundation in education.
+                I am a professional Computer Engineer and Educator with technical expertise in Electronic and Computer Engineering from the Technical University of Crete. My career focuses on the intersection of Data Analysis, Machine Learning, and pedagogical excellence.
             </p>
         </section>
 
         <section id="experience">
             <h2>Experience</h2>
-            
-            <div class="experience-item">
-                <div class="role">Behavioral Data Analyst</div>
-                <div class="company">Behavioral Signals</div>
-                <div class="date">Previously: Junior Machine Learning Engineer</div>
-                <p>Focused on processing and analyzing complex datasets to extract meaningful behavioral insights using advanced ML techniques.</p>
-            </div>
-
-            <div class="experience-item">
-                <div class="role">Computer Engineering & Education</div>
-                <div class="company">Technical University of Crete (ECE)</div>
-                <p>Graduate of Electronic and Computer Engineering. Trilingual professional (Greek, German, English) with a focus on merging technology with pedagogical excellence.</p>
+            <div class="experience-grid">
+                <div class="experience-item">
+                    <div class="role">Behavioral Data Analyst</div>
+                    <div class="company">Behavioral Signals</div>
+                    <div class="date">Previously: Junior Machine Learning Engineer</div>
+                    <p>Processing and analyzing complex datasets to extract meaningful behavioral insights using advanced ML techniques.</p>
+                </div>
+                <div class="experience-item">
+                    <div class="role">Computer Engineer & Educator</div>
+                    <div class="company">Technical University of Crete</div>
+                    <p>Focusing on merging technology with educational frameworks to drive technical learning and innovation.</p>
+                </div>
             </div>
         </section>
 
-        <section id="skills">
+        <section id="education">
+            <h2>Education</h2>
+            <div class="experience-grid">
+                <div class="experience-item">
+                    <div class="role">Electronic and Computer Engineering</div>
+                    <div class="company">Technical University of Crete</div>
+                    <p>Diploma focused on system architecture, signal processing, and computer engineering principles.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="experience-item">
+                <div class="role">Diploma Thesis</div>
+                <div class="company">Technical University of Crete</div>
+                <p>Specific details on research area and findings to be updated.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="skills-grid">
+                <a href="https://gr.linkedin.com/in/efi-arvaniti-47a71343" target="_blank" class="skill-tag">LinkedIn</a>
+                <a href="mailto:earvaniti@example.com" class="skill-tag">Email</a>
+            </div>
+        </section>
+
+        <section id="expertise">
             <h2>Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-tag">Data Analysis</div>
@@ -213,22 +293,6 @@
                 <div class="skill-tag">Pedagogy</div>
                 <div class="skill-tag">Computer Engineering</div>
                 <div class="skill-tag">Trilingual (GR/DE/EN)</div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="experience-grid">
-                <div class="experience-item">
-                    <div class="role">Project Title</div>
-                    <div class="company">Engineering / Research</div>
-                    <p>A brief description of the technical challenges, the stack used, and the impact of the project. (Content to be updated).</p>
-                </div>
-                <div class="experience-item">
-                    <div class="role">Educational Initiative</div>
-                    <div class="company">Pedagogy / Tech</div>
-                    <p>Details about curriculum design, teaching methods, or technical education projects. (Content to be updated).</p>
-                </div>
             </div>
         </section>
     </div>

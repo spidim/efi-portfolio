@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Efi Arvaniti | Electronic-Computer Engineer & Educator</title>
+    <title>Efi Arvaniti | Computer Engineer & Educator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <style>
@@ -70,12 +70,7 @@
             z-index: 10001;
         }
 
-        /* Desktop Menu - Hidden by default for Donut feel */
-        nav.main-nav ul {
-            display: none;
-        }
-
-        /* Menu Button (Donut/Hamburger) */
+        /* Menu Button */
         .menu-trigger {
             width: 30px;
             height: 30px;
@@ -146,21 +141,6 @@
         .menu-trigger.active span:nth-child(2) { transform: scaleX(0); }
         .menu-trigger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
-
-        nav.main-nav a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-size: 12px;
-            font-weight: 400;
-            opacity: 0.8;
-            transition: opacity 0.2s;
-        }
-
-        nav.main-nav a:hover {
-            opacity: 1;
-            color: var(--accent-color);
-        }
-
         header {
             padding: 120px 20px 60px;
             max-width: 980px;
@@ -169,12 +149,12 @@
         }
 
         .profile-photo {
-            width: 160px;
-            height: 160px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 24px;
-            border: 1px solid var(--border-color);
+            border: 4px solid white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             background-color: var(--card-bg);
         }
 
@@ -224,13 +204,13 @@
             font-weight: 400;
             letter-spacing: .011em;
             color: var(--text-color);
-            max-width: 80%;
+            max-width: 90%;
         }
 
         .experience-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            grid-template-columns: 1fr;
+            gap: 24px;
         }
 
         .experience-item {
@@ -241,7 +221,7 @@
         }
 
         .experience-item:hover {
-            transform: scale(1.02);
+            transform: scale(1.01);
         }
 
         .role {
@@ -254,6 +234,7 @@
             font-size: 19px;
             color: var(--accent-color);
             margin-bottom: 12px;
+            font-weight: 500;
         }
 
         .date {
@@ -262,6 +243,17 @@
             letter-spacing: 0.05em;
             color: var(--secondary-text);
             margin-bottom: 16px;
+        }
+
+        .description-list {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .description-list li {
+            margin-bottom: 8px;
+            font-size: 17px;
+            color: var(--text-color);
         }
 
         .skills-grid {
@@ -276,6 +268,8 @@
             border-radius: 12px;
             font-size: 17px;
             font-weight: 500;
+            text-decoration: none;
+            color: var(--text-color);
         }
 
         footer {
@@ -283,33 +277,27 @@
             background: #f5f5f7;
             text-align: center;
             color: var(--secondary-text);
-            font-size: 12px;
+            font-size: 14px;
         }
 
-        .social-links {
-            margin-top: 20px;
+        .education-item {
+            margin-bottom: 30px;
         }
 
-        .social-links a {
-            display: inline-block;
-            color: var(--accent-color);
-            text-decoration: none;
-            margin: 0 15px;
+        .degree {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .university {
             font-size: 17px;
-            border-bottom: 1px solid transparent;
-        }
-
-        .social-links a:hover {
-            border-bottom-color: var(--accent-color);
+            color: var(--secondary-text);
         }
 
         @media (max-width: 734px) {
             h1 { font-size: 40px; }
             h2 { font-size: 32px; }
-            .experience-grid { grid-template-columns: 1fr; }
             .about-text { max-width: 100%; }
-            nav.main-nav ul { gap: 15px; }
-            nav.main-nav a { font-size: 10px; }
         }
     </style>
 </head>
@@ -318,7 +306,6 @@
     <nav class="main-nav">
         <div class="nav-container">
             <a href="#" class="nav-logo">EA</a>
-            
             <div class="menu-trigger" id="menuBtn">
                 <span></span>
                 <span></span>
@@ -332,76 +319,102 @@
             <li><a href="#about" onclick="toggleMenu()">About</a></li>
             <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
             <li><a href="#education" onclick="toggleMenu()">Education</a></li>
-            <li><a href="#publications" onclick="toggleMenu()">Publications</a></li>
+            <li><a href="#expertise" onclick="toggleMenu()">Expertise</a></li>
             <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </ul>
     </div>
 
-    <script>
-        const menuBtn = document.getElementById('menuBtn');
-        const menuOverlay = document.getElementById('menuOverlay');
-        const body = document.body;
-
-        function toggleMenu() {
-            menuBtn.classList.toggle('active');
-            menuOverlay.classList.toggle('active');
-            // Prevent scrolling when menu is open
-            body.style.overflow = menuOverlay.classList.contains('active') ? 'hidden' : 'auto';
-        }
-
-        menuBtn.addEventListener('click', toggleMenu);
-    </script>
-
     <header>
-        <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
-            <img src="profile.jpg" alt="Efi Arvaniti" class="profile-photo" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid white; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="profile.jpg" alt="Efi Arvaniti" class="profile-photo">
             <h1 style="margin-top: 20px;">Efi Arvaniti</h1>
-            <p class="subtitle">Electronic-Computer Engineer & Educator</p>
+            <p class="subtitle">Computer Engineer & Educator based in Seattle</p>
         </div>
     </header>
 
     <div class="container">
         <section id="about">
-            <h2>About</h2>
+            <h2>Professional Summary</h2>
             <p class="about-text">
-                I am a professional Computer Engineer and Educator with technical expertise in Electronic and Computer Engineering from the Technical University of Crete. My career focuses on the intersection of Data Analysis, Machine Learning, and pedagogical excellence.
+                Versatile Computer Engineer and Educator with over 10 years of experience spanning software development, data analysis, and technical instruction. Specialized in machine learning data annotation and speech audio analysis, including Deepfake detection. Trilingual professional (English, German, Greek) with a Master’s in Special Education and a Master’s in Informatics. Adept at bridging the gap between technical development teams and data operations to deliver high-quality ML models.
             </p>
         </section>
 
         <section id="experience">
             <h2>Experience</h2>
             <div class="experience-grid">
+                
                 <div class="experience-item">
-                    <div class="role">Behavioral Data Analyst</div>
-                    <div class="company">Behavioral Signals</div>
-                    <div class="date">Previously: Junior Machine Learning Engineer</div>
-                    <p>Processing and analyzing complex datasets to extract meaningful behavioral insights using advanced ML techniques.</p>
+                    <div class="role">Data Analyst - Data Annotator</div>
+                    <div class="company">Behavioral Signals Inc. (Remote - LA, California)</div>
+                    <div class="date">July 2025 - Present</div>
+                    <ul class="description-list">
+                        <li>Speech audio Deepfakes recognition & classification using annotation tools.</li>
+                        <li>Curating high-quality datasets of synthetic and deepfake speech audio for ML model training.</li>
+                        <li>Annotating speech audio files for behavioral and emotional content state Machine Learning models.</li>
+                        <li>Working with language annotation tools and online deepfake platforms (ElevenLabs).</li>
+                    </ul>
                 </div>
+
                 <div class="experience-item">
-                    <div class="role">Computer Engineer & Educator</div>
-                    <div class="company">Technical University of Crete</div>
-                    <p>Focusing on merging technology with educational frameworks to drive technical learning and innovation.</p>
+                    <div class="role">Teacher of Informatics and Electronics</div>
+                    <div class="company">High School & Elementary Schools (Greece, EU)</div>
+                    <div class="date">2019 - 2024 & 2011 - 2012</div>
+                    <ul class="description-list">
+                        <li>Teaching Informatics, Electronics and guiding students to new technologies across several school levels.</li>
+                        <li>IT support of school’s computer lab and administration.</li>
+                    </ul>
                 </div>
+
+                <div class="experience-item">
+                    <div class="role">Data Analyst / Team Leader</div>
+                    <div class="company">Behavioral Signals Inc. (Remote)</div>
+                    <div class="date">June 2017 - May 2020</div>
+                    <ul class="description-list">
+                        <li>Annotated speech audio and clustered into emotion classes.</li>
+                        <li>Led a team of 3 to 5 coworkers, coordinating between Development and Data Analysis teams.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="role">Co-founder and Software Engineer</div>
+                    <div class="company">IRISWeb (Thessaloniki, Greece)</div>
+                    <div class="date">June 2013 - May 2020</div>
+                    <ul class="description-list">
+                        <li>Managed and developed Website and Web application projects (Joomla, Wordpress).</li>
+                        <li>Participated in software development projects using C and C++.</li>
+                    </ul>
+                </div>
+
             </div>
         </section>
 
         <section id="education">
             <h2>Education</h2>
-            <div class="experience-grid">
-                <div class="experience-item">
-                    <div class="role">Electronic and Computer Engineering</div>
-                    <div class="company">Technical University of Crete</div>
-                    <p>Diploma focused on system architecture, signal processing, and computer engineering principles.</p>
-                </div>
+            <div class="education-item">
+                <div class="degree">Masters in Special Education</div>
+                <div class="university">University of Macedonia, Greece (2021)</div>
+            </div>
+            <div class="education-item">
+                <div class="degree">Masters in Informatics (Electronics)</div>
+                <div class="university">University of Ioannina, Greece (2011)</div>
+            </div>
+            <div class="education-item">
+                <div class="degree">Bachelor of Science in Electronics and Computer Engineering</div>
+                <div class="university">Technical University of Crete, Greece (2008)</div>
             </div>
         </section>
 
-        <section id="publications">
-            <h2>Publications</h2>
-            <div class="experience-item">
-                <div class="role">Diploma Thesis</div>
-                <div class="company">Technical University of Crete</div>
-                <p>Specific details on research area and findings to be updated.</p>
+        <section id="expertise">
+            <h2>Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">Deepfake Recognition</div>
+                <div class="skill-tag">Data Analysis & Annotation</div>
+                <div class="skill-tag">Machine Learning Operations</div>
+                <div class="skill-tag">Computer Science Education</div>
+                <div class="skill-tag">Web Development (Wordpress/Joomla)</div>
+                <div class="skill-tag">C / C++</div>
+                <div class="skill-tag">Trilingual: English (C1), German (B2), Greek (Native)</div>
             </div>
         </section>
 
@@ -412,23 +425,26 @@
                 <a href="mailto:efi_hmmy@yahoo.gr" class="skill-tag">Email</a>
             </div>
         </section>
-
-        <section id="expertise">
-            <h2>Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-tag">Data Analysis</div>
-                <div class="skill-tag">Machine Learning</div>
-                <div class="skill-tag">Python</div>
-                <div class="skill-tag">Pedagogy</div>
-                <div class="skill-tag">Computer Engineering</div>
-                <div class="skill-tag">Trilingual (GR/DE/EN)</div>
-            </div>
-        </section>
     </div>
 
     <footer>
-        <p>&copy; 2026 Efi Arvaniti | arvaniti.gr</p>
+        <p>&copy; 2026 Efi Arvaniti | Seattle, WA</p>
+        <p>8 W Crockett Str, Seattle, WA 98119 | +1 206 600 0256</p>
     </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const body = document.body;
+
+        function toggleMenu() {
+            menuBtn.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            body.style.overflow = menuOverlay.classList.contains('active') ? 'hidden' : 'auto';
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+    </script>
 
 </body>
 </html>

@@ -280,18 +280,28 @@
             font-size: 14px;
         }
 
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
         .education-item {
-            margin-bottom: 30px;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 18px;
         }
 
         .degree {
             font-size: 20px;
             font-weight: 600;
+            margin-bottom: 4px;
         }
 
         .university {
             font-size: 17px;
-            color: var(--secondary-text);
+            color: var(--accent-color);
+            margin-bottom: 4px;
         }
 
         @media (max-width: 734px) {
@@ -358,21 +368,23 @@
 
                 <div class="experience-item">
                     <div class="role">Teacher of Informatics and Electronics</div>
-                    <div class="company">High School & Elementary Schools (Greece, EU)</div>
-                    <div class="date">2019 - 2024 & 2011 - 2012</div>
+                    <div class="company">High School, Elementary School, Specialized Primary & High School (Greece, EU)</div>
+                    <div class="date">March 2019 - June 2024 & November 2011 - June 2012</div>
                     <ul class="description-list">
                         <li>Teaching Informatics, Electronics and guiding students to new technologies across several school levels.</li>
-                        <li>IT support of school’s computer lab and administration.</li>
+                        <li>IT support of school’s computer lab, software and hardware maintenance.</li>
                     </ul>
                 </div>
 
                 <div class="experience-item">
                     <div class="role">Data Analyst / Team Leader</div>
-                    <div class="company">Behavioral Signals Inc. (Remote)</div>
+                    <div class="company">Behavioral Signals Inc. (Remote - USA/Greece)</div>
                     <div class="date">June 2017 - May 2020</div>
                     <ul class="description-list">
                         <li>Annotated speech audio and clustered into emotion classes.</li>
                         <li>Led a team of 3 to 5 coworkers, coordinating between Development and Data Analysis teams.</li>
+                        <li>Organized timelines, meetings, and presented deliverables to the Development team.</li>
+                        <li>Contributed to development and validation of ML annotation tools.</li>
                     </ul>
                 </div>
 
@@ -381,8 +393,28 @@
                     <div class="company">IRISWeb (Thessaloniki, Greece)</div>
                     <div class="date">June 2013 - May 2020</div>
                     <ul class="description-list">
-                        <li>Managed and developed Website and Web application projects (Joomla, Wordpress).</li>
+                        <li>Managed and developed Website and Web application projects for customers using Joomla and Wordpress.</li>
                         <li>Participated in software development projects using C and C++.</li>
+                        <li>Handled hardware services and office administration.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="role">IT Support Engineer</div>
+                    <div class="company">Prefecture of Thesprotia-Epirus (Igoumenitsa, Greece)</div>
+                    <div class="date">January 2013 - June 2013</div>
+                    <ul class="description-list">
+                        <li>General IT support: computer services, printers, software/hardware support, and network maintenance.</li>
+                        <li>Provided guidance to users and assisted in local election organization.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="role">Assistant in the Digital Design Lab</div>
+                    <div class="company">University of Ioannina (Ioannina, Greece)</div>
+                    <div class="date">2009 - 2011</div>
+                    <ul class="description-list">
+                        <li>Assistant in digital design for undergraduate students.</li>
                     </ul>
                 </div>
 
@@ -391,17 +423,27 @@
 
         <section id="education">
             <h2>Education</h2>
-            <div class="education-item">
-                <div class="degree">Masters in Special Education</div>
-                <div class="university">University of Macedonia, Greece (2021)</div>
-            </div>
-            <div class="education-item">
-                <div class="degree">Masters in Informatics (Electronics)</div>
-                <div class="university">University of Ioannina, Greece (2011)</div>
-            </div>
-            <div class="education-item">
-                <div class="degree">Bachelor of Science in Electronics and Computer Engineering</div>
-                <div class="university">Technical University of Crete, Greece (2008)</div>
+            <div class="education-grid">
+                <div class="education-item">
+                    <div class="degree">Masters in Special Education</div>
+                    <div class="university">University of Macedonia, Greece</div>
+                    <div class="date">2021</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">Annual Pedagogical Training Program</div>
+                    <div class="university">School of Pedagogical and Technological Education (ASPAITE), Greece</div>
+                    <div class="date">2011</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">Masters in Informatics (Electronics)</div>
+                    <div class="university">University of Ioannina, Greece</div>
+                    <div class="date">2011</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">Bachelor of Science (Diploma) in Electronics and Computer Engineering</div>
+                    <div class="university">Technical University of Crete, Greece</div>
+                    <div class="date">2008</div>
+                </div>
             </div>
         </section>
 
@@ -413,8 +455,12 @@
                 <div class="skill-tag">Machine Learning Operations</div>
                 <div class="skill-tag">Computer Science Education</div>
                 <div class="skill-tag">Web Development (Wordpress/Joomla)</div>
+                <div class="skill-tag">IT Support & Network Administration</div>
                 <div class="skill-tag">C / C++</div>
-                <div class="skill-tag">Trilingual: English (C1), German (B2), Greek (Native)</div>
+                <div class="skill-tag">Digital Design</div>
+                <div class="skill-tag">English (Advanced C1)</div>
+                <div class="skill-tag">German (Elementary B2)</div>
+                <div class="skill-tag">Greek (Native)</div>
             </div>
         </section>
 
@@ -423,13 +469,14 @@
             <div class="skills-grid">
                 <a href="https://gr.linkedin.com/in/efi-arvaniti-47a71343" target="_blank" class="skill-tag">LinkedIn</a>
                 <a href="mailto:efi_hmmy@yahoo.gr" class="skill-tag">Email</a>
+                <div class="skill-tag">+1 206 600 0256</div>
             </div>
         </section>
     </div>
 
     <footer>
         <p>&copy; 2026 Efi Arvaniti | Seattle, WA</p>
-        <p>8 W Crockett Str, Seattle, WA 98119 | +1 206 600 0256</p>
+        <p>8 W Crockett Str, Seattle, WA 98119</p>
     </footer>
 
     <script>
